@@ -1,0 +1,31 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34622.214
+MinimumVisualStudioVersion = 16.0.0.0
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Arcade.Windows", "Arcade.Windows\Arcade.Windows.csproj", "{AF511AA3-9399-4F54-AFBD-13A9FC9FD76D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Arcade", "Arcade\Arcade.csproj", "{60F593C9-99C8-46D7-81CA-58833242F02A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF511AA3-9399-4F54-AFBD-13A9FC9FD76D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF511AA3-9399-4F54-AFBD-13A9FC9FD76D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF511AA3-9399-4F54-AFBD-13A9FC9FD76D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF511AA3-9399-4F54-AFBD-13A9FC9FD76D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60F593C9-99C8-46D7-81CA-58833242F02A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60F593C9-99C8-46D7-81CA-58833242F02A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60F593C9-99C8-46D7-81CA-58833242F02A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60F593C9-99C8-46D7-81CA-58833242F02A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {00B3ADAE-AB1B-4EE8-BFDB-2EAFE3DBC28D}
+	EndGlobalSection
+EndGlobal

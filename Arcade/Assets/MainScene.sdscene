@@ -1,0 +1,322 @@
+!SceneAsset
+Id: 724cd5ae-c382-495a-b7eb-5c02aba22de2
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+ChildrenIds: []
+Offset: {X: 0.0, Y: 0.0, Z: 0.0}
+Hierarchy:
+    RootParts:
+        - ref!! 08fc7198-6762-4063-bb34-7e2af4837045
+        - ref!! 418906d7-d157-491e-8ff8-2d51a0a04643
+        - ref!! 69a00505-11a8-4225-b287-e5a0607f40ca
+        - ref!! c854c269-7803-456b-b0b1-d081c4ad0ac4
+        - ref!! 3451281e-f1f3-40c6-97e9-7e61fb68f12d
+        - ref!! 2ce4cce1-0e3f-4ba8-9daf-1efd6f89afc5
+        - ref!! ebbd9a98-99a2-4b50-9f76-c51a931c74cf
+        - ref!! b6eff2a4-5c4c-4b86-8624-76e14972a33a
+    Parts:
+        -   Entity:
+                Id: 08fc7198-6762-4063-bb34-7e2af4837045
+                Name: Camera
+                Components:
+                    13e8fcfc86f00f781082b43bd9b22aa2: !TransformComponent
+                        Id: 3d22c1a6-ada4-4c04-8746-256a8733283d
+                        Position: {X: 2.6, Y: 0.6, Z: -1.0}
+                        Rotation: {X: 0.0, Y: 0.82903755, Z: 0.0, W: 0.5591929}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    3d21897e11fe5bc4d2aa5853534a1728: !CameraComponent
+                        Id: 91c393e1-e6bd-4c37-90d4-efcdf5e9d8b6
+                        Name: null
+                        Projection: Perspective
+                        Slot: ae8796de-e8fd-48cc-8011-1b81f2306f9a
+                    91279f429f3e1cc2892e697d305f1134: !SmoothFollowAndRotate
+                        Id: d4b05212-2fac-4c53-a769-9674551822d0
+                        EntityToFollow: ref!! 415c1334-91c5-4849-b388-bedcd39d174d
+                        Speed: 100.0
+                    de4c0de60f093c0b1fa15ed139e13b68: !BepuRaycastHandler
+                        Id: 3568d148-e727-43ee-bb8b-0e8148dcad17
+                        Camera: ref!! 91c393e1-e6bd-4c37-90d4-efcdf5e9d8b6
+                        RayLength: 3.0
+                        CollisionMask: Everything
+                        BepuSimulation: 0
+        -   Entity:
+                Id: 14c93df0-bfc5-4495-84ff-aa18a84a1710
+                Name: CameraAnchor
+                Components:
+                    8c12fb3258f0bcbac84d3b98dbcd60de: !TransformComponent
+                        Id: 86fa6427-818d-4142-a8f1-643a5fe630c3
+                        Position: {X: 1.6790578, Y: 0.22866163, Z: 2.1877147E-08}
+                        Rotation: {X: 0.0, Y: 0.70710677, Z: 0.0, W: 0.70710677}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+        -   Entity:
+                Id: 2ce4cce1-0e3f-4ba8-9daf-1efd6f89afc5
+                Name: TestArcade
+                Components:
+                    efd5e650531ab2981859a6e5b3874813: !TransformComponent
+                        Id: f6d9405c-4e87-40e9-84c2-7088b4fd713e
+                        Position: {X: -3.4636717, Y: 0.0, Z: 2.0375493}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            5255129d7832f645d55cd9116681ac5b: ref!! bd4ee303-5aee-49c6-bc5d-716165110af4
+                            99b192ae20c586f2e6584e35e28565b5: ref!! dcc69e9b-3c59-4359-b0c4-8429e283e65d
+                    cab17ca8929315c6feef75f010d2cddd: !ModelComponent
+                        Id: 70650d64-cf06-4b80-9f2a-fd8ed004c3e1
+                        Model: cb0b4b9f-4ed3-4d7b-90c4-040df7fe816d:Models/arcade-cabinet
+                        Materials: {}
+                    189e0663d68d4805fe6637fcc3323fa2: !Stride.BepuPhysics.StaticComponent,Stride.BepuPhysics
+                        Id: afa6951d-2bd0-4564-bbc1-3c62b5331209
+                        Collider: !Stride.BepuPhysics.Definitions.Colliders.MeshCollider,Stride.BepuPhysics
+                            Model: cb0b4b9f-4ed3-4d7b-90c4-040df7fe816d:Models/arcade-cabinet
+                            Mass: 1.0
+                            Closed: true
+                        SpringFrequency: 30.0
+                        SpringDampingRatio: 3.0
+                        FrictionCoefficient: 1.0
+                        MaximumRecoveryVelocity: 1000.0
+                        CollisionGroup: {}
+                        ContactEventHandler: null
+                    3b09bdfc104d593d70384a4f3f4108c0: !Arcade.Code.Arcade.UIPageCabinet,Arcade
+                        Id: d5bd811b-830b-42a0-a251-27d3d9d9c7a0
+                        Name: 747e6fdd-2f32-4000-b21e-d40e7f46390c
+                        IsDefaultState: false
+                        CameraAnchorPosition: ref!! 374dde22-f419-434c-af2f-47ee7feea94d
+                        ChildSceneUrl: a29ecff1-ceae-445a-b4e6-2c6f14a41571:TestScene
+                        ArcadeScreen: ref!! 04ad300c-c698-4af9-8227-07700038da07
+        -   Entity:
+                Id: 3451281e-f1f3-40c6-97e9-7e61fb68f12d
+                Name: Player
+                Components:
+                    b9aff9e2f7a7a945aace2b2247440623: !TransformComponent
+                        Id: 9a8d129a-3fb1-447a-a796-7bf1c473f9f4
+                        Position: {X: 1.3986884, Y: 0.0, Z: 2.4583626}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            c9b137320ebef952a8aa194bc4baefb4: ref!! f367a2ff-3b3b-4a11-a289-10703798c3f6
+                    935caa6bb114b399eef7a8409ccfb494: !Stride.BepuPhysics.CharacterComponent,Stride.BepuPhysics
+                        Id: f82ef069-ded5-4358-a19c-dce21478580f
+                        Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
+                            Colliders:
+                                60aa98997403090a54f8931f6175bb0d: !Stride.BepuPhysics.Definitions.Colliders.CylinderCollider,Stride.BepuPhysics
+                                    Mass: 1.0
+                                    PositionLocal: {X: 0.0, Y: 1.0, Z: 0.0}
+                                    RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                    Radius: 0.3
+                                    Length: 2.0
+                        SpringFrequency: 30.0
+                        SpringDampingRatio: 3.0
+                        FrictionCoefficient: 1.0
+                        MaximumRecoveryVelocity: 1000.0
+                        CollisionGroup: {}
+                        SimulationSelector: !Stride.BepuPhysics.Definitions.IndexBasedSimulationSelector,Stride.BepuPhysics
+                            Index: 0
+                        ContactEventHandler: null
+                        Kinematic: false
+                        Gravity: true
+                        InterpolationMode: Interpolated
+                        ContinuousDetectionMode: Discrete
+                        SleepThreshold: 0.01
+                        MinimumTimestepCountUnderThreshold: 32
+                        Speed: 10.0
+                        JumpForce: 10.0
+                    2da4381d4e41b15749efefbfce1c4503: !Arcade.Code.Player.PlayerStateMachine,Arcade
+                        Id: 57125e77-cc24-43ae-9918-8ff7ff6553f8
+                        CameraFollower: ref!! d4b05212-2fac-4c53-a769-9674551822d0
+                        DefaultState: !Arcade.Code.Player.PlayerFirstPersonController,Arcade ref!! 42687504-4923-41d7-8594-bfbe814f9540
+                    806c2257b86d5bb7cfd39f8b9d077c4d: !Arcade.Code.Player.PlayerFirstPersonController,Arcade
+                        Id: 42687504-4923-41d7-8594-bfbe814f9540
+                        Name: 7acc8793-31f4-46c7-9e6d-b4612b75c595
+                        IsDefaultState: true
+                        CameraPivot: ref!! 415c1334-91c5-4849-b388-bedcd39d174d
+                        MinCameraAngle: -90.0
+                        MaxCameraAngle: 90.0
+                        CameraAnchorPosition: ref!! 415c1334-91c5-4849-b388-bedcd39d174d
+                        CharacterComponent: ref!! f82ef069-ded5-4358-a19c-dce21478580f
+                        RaycastHandler: ref!! 3568d148-e727-43ee-bb8b-0e8148dcad17
+        -   Entity:
+                Id: 374dde22-f419-434c-af2f-47ee7feea94d
+                Name: CameraAnchor
+                Components:
+                    8c12fb3258f0bcbac84d3b98dbcd60de: !TransformComponent
+                        Id: bd4ee303-5aee-49c6-bc5d-716165110af4
+                        Position: {X: 0.0020694397, Y: 1.9562864, Z: 0.78852314}
+                        Rotation: {X: -0.16933171, Y: 0.0, Z: 0.0, W: 0.98555905}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+        -   Entity:
+                Id: 415c1334-91c5-4849-b388-bedcd39d174d
+                Name: CameraPivot
+                Components:
+                    bf09d14c64a6d2cac8200adc5b0a924a: !TransformComponent
+                        Id: f367a2ff-3b3b-4a11-a289-10703798c3f6
+                        Position: {X: 0.0, Y: 1.75, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+        -   Entity:
+                Id: 418906d7-d157-491e-8ff8-2d51a0a04643
+                Name: Directional light
+                Components:
+                    11b981c931d53a851f7771215f8b57bc: !TransformComponent
+                        Id: cd0b9218-0beb-4459-89cf-223ab365e9e3
+                        Position: {X: 0.0, Y: 2.0, Z: 0.0}
+                        Rotation: {X: 1.131334E-08, Y: -0.9659258, Z: -0.25881904, W: -4.222196E-08}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    9f0149b03db4fb51e162a76ca97c6ef1: !LightComponent
+                        Id: 1ce16d1e-0bf1-4450-a55f-a2870db98ab7
+                        Type: !LightDirectional
+                            Color: !ColorRgbProvider
+                                Value: {R: 1.0, G: 1.0, B: 1.0}
+                            Shadow:
+                                Enabled: true
+                                Filter: !LightShadowMapFilterTypePcf
+                                    FilterSize: Filter5x5
+                                Size: Large
+                                DepthRange: {}
+                                PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic {}
+                                ComputeTransmittance: false
+                                BiasParameters: {}
+                        Intensity: 20.0
+        -   Entity:
+                Id: 585e3570-11ec-428f-aa1b-9f46aa931a9e
+                Name: ArcadeScreen
+                Components:
+                    91c54099d7f74db7d6e11fa25004e550: !TransformComponent
+                        Id: 87276fe4-5530-4d8d-9606-79100665ecc8
+                        Position: {X: 0.5079364, Y: 0.24494828, Z: 3.0275373E-08}
+                        Rotation: {X: 0.0, Y: 0.70710677, Z: 0.0, W: 0.70710677}
+                        Scale: {X: 0.2, Y: 0.1, Z: 0.2}
+                        Children: {}
+                    f0341d853de258d341029abdb9d5aa43: !SpriteComponent
+                        Id: ef75f1be-424a-47af-b4f2-675d4e4ea8e1
+                        Enabled: false
+                        SpriteProvider: !SpriteFromTexture
+                            Texture: b705bf6a-2367-49dc-ba45-d294e65c7c91:RenderTexture
+                            Center: {X: 0.0, Y: 0.0}
+                            IsTransparent: false
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                        RenderGroup: Group1
+        -   Entity:
+                Id: 69a00505-11a8-4225-b287-e5a0607f40ca
+                Name: Skybox
+                Components:
+                    93be519a13dc0206447ddfe37297464b: !TransformComponent
+                        Id: ed6ac20f-0137-44ee-85d3-dd775cd66638
+                        Position: {X: 0.0, Y: 2.0, Z: -2.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    61a137a85c1028ecdca4fb77fc79725d: !BackgroundComponent
+                        Id: 46fe151d-cdaf-456d-8e9e-3ddba1c85136
+                        Texture: ed69e944-46c7-4f73-968f-ac9e8af1dff5:Skybox texture
+                        Intensity: 0.2
+                    0d8c3961b149395890acf8650720d6fd: !LightComponent
+                        Id: 516c0ec7-d9e2-42f7-af6b-8320a6b18890
+                        Type: !LightSkybox
+                            Skybox: dcd12f61-76f3-44b6-aac6-4e3bc9bf4adf:Skybox
+        -   Entity:
+                Id: 84502045-85eb-40bc-85f6-60a9ea9d99c7
+                Name: ArcadeScreen
+                Components:
+                    ac4d8520c57a0a9d6e8fa3293c689019: !TransformComponent
+                        Id: dcc69e9b-3c59-4359-b0c4-8429e283e65d
+                        Position: {X: -0.019, Y: 1.618, Z: -0.019}
+                        Rotation: {X: -0.1387842, Y: 0.0, Z: 0.0, W: 0.99032265}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    8046894077130628d90a31272e43ee77: !UIComponent
+                        Id: 04ad300c-c698-4af9-8227-07700038da07
+                        Enabled: false
+                        Page: 3a0a3e01-3426-422a-bc24-595bf5d194a9:UI/Page
+                        IsFullScreen: false
+                        Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
+                        Size: {X: 1.28, Y: 0.72, Z: 1.0}
+                        IsBillboard: false
+        -   Entity:
+                Id: b6eff2a4-5c4c-4b86-8624-76e14972a33a
+                Name: arcade-cabinet
+                Components:
+                    6bd78b6766e3c4251f26964d9e478853: !TransformComponent
+                        Id: 2f92c543-3ec4-4cba-9ad9-64f31e23f724
+                        Position: {X: -3.7411048, Y: 0.0, Z: -3.1770177}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    e42d3bc54b285482ed28fd48cd92bf95: !ModelComponent
+                        Id: 260b0bcd-5898-4888-ad19-15101a9d38a7
+                        Model: cb0b4b9f-4ed3-4d7b-90c4-040df7fe816d:Models/arcade-cabinet
+                        Materials: {}
+        -   Entity:
+                Id: c854c269-7803-456b-b0b1-d081c4ad0ac4
+                Name: Ground
+                Components:
+                    cdf32f09e4bb08eb036cac609a867c4c: !TransformComponent
+                        Id: 136c128e-f5a3-4379-89b8-e307a3b0a28c
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    adc7a6715a6dcaf3e72516860b22b280: !ModelComponent
+                        Id: 7a0a4f5a-5c1a-4485-a9da-12cc813ad58c
+                        Model: 1c487b54-dec8-44aa-8e69-60c8baca0bbc:Ground
+                        Materials: {}
+                    b9558a4da074f16a959519658f698846: !Stride.BepuPhysics.StaticComponent,Stride.BepuPhysics
+                        Id: a8ae2ac6-f59d-4f2c-834a-37b96dc672cd
+                        Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
+                            Colliders:
+                                6a849768894caf8bbaceec726f82cea0: !Stride.BepuPhysics.Definitions.Colliders.BoxCollider,Stride.BepuPhysics
+                                    Mass: 1.0
+                                    PositionLocal: {X: 0.0, Y: -0.5, Z: 0.0}
+                                    RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                    Size: {X: 10.0, Y: 1.0, Z: 10.0}
+                        SpringFrequency: 30.0
+                        SpringDampingRatio: 3.0
+                        FrictionCoefficient: 1.0
+                        MaximumRecoveryVelocity: 1000.0
+                        CollisionGroup: {}
+                        SimulationSelector: !Stride.BepuPhysics.Definitions.IndexBasedSimulationSelector,Stride.BepuPhysics
+                            Index: 0
+                        ContactEventHandler: null
+        -   Folder: null
+            Entity:
+                Id: ebbd9a98-99a2-4b50-9f76-c51a931c74cf
+                Name: FalppyBallArcade
+                Components:
+                    efd5e650531ab2981859a6e5b3874813: !TransformComponent
+                        Id: dc16f061-93d2-41c1-8566-6f6fb31037e5
+                        Position: {X: -3.4636717, Y: 1.0, Z: 0.012383223}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 2.0, Z: 1.0}
+                        Children:
+                            5255129d7832f645d55cd9116681ac5b: ref!! 86fa6427-818d-4142-a8f1-643a5fe630c3
+                            cb0e7eee6975da04a58532b27899a990: ref!! 87276fe4-5530-4d8d-9606-79100665ecc8
+                    cab17ca8929315c6feef75f010d2cddd: !ModelComponent
+                        Id: 79f5cefc-d19c-4a1b-9508-c303c13ecb4c
+                        Model: dd558a98-477c-490c-98a1-18a4f8f2f989:Cube
+                        Materials: {}
+                    189e0663d68d4805fe6637fcc3323fa2: !Stride.BepuPhysics.StaticComponent,Stride.BepuPhysics
+                        Id: 000ef698-2861-41c7-87af-22d22bb2fd05
+                        Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
+                            Colliders:
+                                4c1d2a329c67dd4c2f29b7a332acb077: !Stride.BepuPhysics.Definitions.Colliders.BoxCollider,Stride.BepuPhysics
+                                    Mass: 1.0
+                                    PositionLocal: {X: 0.0, Y: 0.0, Z: 0.0}
+                                    RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                    Size: {X: 1.0, Y: 2.0, Z: 1.0}
+                        SpringFrequency: 30.0
+                        SpringDampingRatio: 3.0
+                        FrictionCoefficient: 1.0
+                        MaximumRecoveryVelocity: 1000.0
+                        CollisionGroup: {}
+                        ContactEventHandler: null
+                    5a2f5123e75f068af2d5a0311a3f56c2: !Arcade.Code.Arcade.TestCabinet,Arcade
+                        Id: 6b3bfa3a-13ab-45b4-adc9-0a0054968c0e
+                        Name: 92b8118c-4748-445e-ae4b-d4bd46eaae1d
+                        IsDefaultState: false
+                        CameraAnchorPosition: ref!! 14c93df0-bfc5-4495-84ff-aa18a84a1710
+                        ChildSceneUrl: 62bce447-0cf8-4d75-bed2-65d16406e18e:FlappyBall/FlappyBallScene
+                        ArcadeScreen: ref!! ef75f1be-424a-47af-b4f2-675d4e4ea8e1

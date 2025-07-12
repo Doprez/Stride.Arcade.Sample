@@ -1,0 +1,93 @@
+!SceneAsset
+Id: a29ecff1-ceae-445a-b4e6-2c6f14a41571
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+ChildrenIds: []
+Offset: {X: 0.0, Y: -200.0, Z: 0.0}
+Hierarchy:
+    RootParts:
+        - ref!! 640449e3-503a-4ca6-afb9-c2c089e0d1d5
+        - ref!! 41198986-27d0-43c4-99b9-30b7a68fd0d1
+        - ref!! c72e21a4-fc5a-4c48-b75e-ccc642810445
+    Parts:
+        -   Entity:
+                Id: 41198986-27d0-43c4-99b9-30b7a68fd0d1
+                Name: Ground
+                Components:
+                    cdf32f09e4bb08eb036cac609a867c4c: !TransformComponent
+                        Id: 30c9d8c6-f397-4fc1-9e6c-e9db4805a9f3
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    adc7a6715a6dcaf3e72516860b22b280: !ModelComponent
+                        Id: 95f7dfbe-33a3-470c-8724-423f9405b2ec
+                        Model: 1c487b54-dec8-44aa-8e69-60c8baca0bbc:Ground
+                        RenderGroup: Group31
+                        Materials: {}
+                    b9558a4da074f16a959519658f698846: !Stride.BepuPhysics.StaticComponent,Stride.BepuPhysics
+                        Id: 231d8045-9a9b-4e14-98b4-1badf16df5ab
+                        Collider: !Stride.BepuPhysics.Definitions.Colliders.CompoundCollider,Stride.BepuPhysics
+                            Colliders:
+                                6a849768894caf8bbaceec726f82cea0: !Stride.BepuPhysics.Definitions.Colliders.BoxCollider,Stride.BepuPhysics
+                                    Mass: 1.0
+                                    PositionLocal: {X: 0.0, Y: -0.5, Z: 0.0}
+                                    RotationLocal: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                    Size: {X: 10.0, Y: 1.0, Z: 10.0}
+                        ContactEventHandler: null
+                        SimulationSelector: !Stride.BepuPhysics.Definitions.IndexBasedSimulationSelector,Stride.BepuPhysics
+                            Index: 0
+                        SpringFrequency: 30.0
+                        SpringDampingRatio: 3.0
+                        FrictionCoefficient: 1.0
+                        MaximumRecoveryVelocity: 1000.0
+                        CollisionGroup: {}
+        -   Entity:
+                Id: 640449e3-503a-4ca6-afb9-c2c089e0d1d5
+                Name: Directional light
+                Components:
+                    11b981c931d53a851f7771215f8b57bc: !TransformComponent
+                        Id: ed44d24b-b552-4526-9254-eff5c75c9c78
+                        Position: {X: 0.0, Y: 2.0, Z: 0.0}
+                        Rotation: {X: 1.131334E-08, Y: -0.9659258, Z: -0.25881904, W: -4.222196E-08}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    9f0149b03db4fb51e162a76ca97c6ef1: !LightComponent
+                        Id: a808d71a-1f11-4e89-ad09-e99f32cffe98
+                        Type: !LightDirectional
+                            Color: !ColorRgbProvider
+                                Value: {R: 1.0, G: 1.0, B: 1.0}
+                            Shadow:
+                                Enabled: true
+                                Filter: !LightShadowMapFilterTypePcf
+                                    FilterSize: Filter5x5
+                                Size: Large
+                                DepthRange: {}
+                                PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic {}
+                                ComputeTransmittance: false
+                                BiasParameters: {}
+                        Intensity: 20.0
+        -   Entity:
+                Id: c72e21a4-fc5a-4c48-b75e-ccc642810445
+                Name: Camera
+                Components:
+                    ef76c858dfe5f4440041f4fc56619f48: !TransformComponent
+                        Id: 12c67be4-9d56-4a8f-a392-87a4aaedffe3
+                        Position: {X: 0.0, Y: 1.8525352, Z: 3.5309205}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    74583138bd6bd6e74876436c107a1f90: !CameraComponent
+                        Id: a8174bd7-9cf7-4263-9be5-86cbf7348165
+                        Name: null
+                        Projection: Perspective
+                        Slot: c1f3409f-a1fa-43a1-b9cf-663ed553a623
+                    15c7642bc5f105a67998fd1bdb1a1324: !Arcade.BasicCameraController,Arcade
+                        Id: 856955d8-2aa9-4a60-af8d-2940ec4a30a8
+                        Gamepad: false
+                        KeyboardMovementSpeed: {X: 5.0, Y: 5.0, Z: 5.0}
+                        TouchMovementSpeed: {X: 0.7, Y: 0.7, Z: 0.3}
+                        SpeedFactor: 5.0
+                        KeyboardRotationSpeed: {X: 3.0, Y: 3.0}
+                        MouseRotationSpeed: {X: 1.0, Y: 1.0}
+                        TouchRotationSpeed: {X: 1.0, Y: 0.7}

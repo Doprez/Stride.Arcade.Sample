@@ -1,0 +1,17 @@
+!Model
+Id: cb0b4b9f-4ed3-4d7b-90c4-040df7fe816d
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Source: !file ../../Resources/arcade-cabinet.fbx
+Skeleton: null
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+ScaleImport: 0.4
+Materials:
+    f3946b535f6f366fb68c34338543804d:
+        Name: Material.001
+        MaterialInstance:
+            Material: 953be0a2-a8ca-4e12-9b95-3c1c7e50b3f0:Materials/Material
+DeduplicateMaterials: false
+Modifiers: {}
+~SourceHashes:
+    fd35a1a334cfb1578e768e294ddc9623~../../Resources/arcade-cabinet.fbx: f38ab3c46dd4a537b7c7ea9d86c986c3

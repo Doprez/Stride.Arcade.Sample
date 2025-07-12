@@ -1,0 +1,85 @@
+!PrefabAsset
+Id: 8712fc8e-572f-49a9-a0ca-b7ecc7975949
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+Hierarchy:
+    RootParts:
+        - ref!! d0758c28-9c40-4553-b77f-e265af48bbdb
+    Parts:
+        -   Folder: null
+            Entity:
+                Id: 5d6854f4-100c-42d4-9cb3-60c539c3de32
+                Name: Cylinder
+                Components:
+                    00388687f809283986c4bebef02e3a65: !TransformComponent
+                        Id: e9419f42-76a8-43ad-83c0-cd1bd0ac796c
+                        Position: {X: 0.0, Y: 12.287, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 20.0, Z: 1.0}
+                        Children: {}
+                    111d23e9a77845f336d9b0b71be0b36b: !ModelComponent
+                        Id: 27bc1b0b-27e5-4f19-bcfd-8e5b12fdb736
+                        Model: 3c114390-55f0-4a9e-a24a-09e61476f6b1:FlappyBall/Cylinder
+                        RenderGroup: Group31
+                        Materials: {}
+        -   Entity:
+                Id: d0758c28-9c40-4553-b77f-e265af48bbdb
+                Name: Pipe
+                Components:
+                    939133acf02cbd69745683d29089c25a: !TransformComponent
+                        Id: 87920583-5c24-42de-90d0-2b6aa1657103
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            aa4771ffd63cbe6b50f0c49a71c4ec06: ref!! e9419f42-76a8-43ad-83c0-cd1bd0ac796c
+                            77c4a1c4a96c711945c7401a1dd64a15: ref!! 5e477004-9dfd-4d1a-8527-80d613eb21ff
+                    bba2f96fabde7f8e3af22a76d91c7694: !RigidbodyComponent
+                        Id: cac9771a-2fde-45f1-b822-6f054ff82c2f
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        IsKinematic: false
+                        Mass: 1.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: true
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            f63b62c4e6fe9c9a99d37c651dbde359: !CylinderColliderShapeDesc
+                                Height: 20.0
+                                LocalOffset: {X: 0.0, Y: 12.287, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                            ad1a9a4ba1e4a845781b7c858a807785: !CylinderColliderShapeDesc
+                                Height: 20.0
+                                LocalOffset: {X: 0.0, Y: -11.954, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    dae5cff166d3263d292657bb5988ba82: !Arcade.Code.ArcadeGames.FlappyBall.PipeMover,Arcade
+                        Id: 7e349d4a-ae4e-46df-8a91-a764837ce23e
+                        Speed: -5.0
+                        LifeTime: 30.0
+                        Rigidbody: null
+                    6ac5260e2a089006c248e3cb93786ebd: !Arcade.Code.ArcadeGames.FlappyBall.PipeTriggerHandler,Arcade
+                        Id: ec50ba55-89de-4853-9703-ef8976ac33a2
+                        Rigidbody: null
+        -   Folder: null
+            Entity:
+                Id: f1767ecc-adaf-4a20-b678-a3ece1b813d3
+                Name: Cylinder
+                Components:
+                    00388687f809283986c4bebef02e3a65: !TransformComponent
+                        Id: 5e477004-9dfd-4d1a-8527-80d613eb21ff
+                        Position: {X: 0.0, Y: -11.954, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 20.0, Z: 1.0}
+                        Children: {}
+                    111d23e9a77845f336d9b0b71be0b36b: !ModelComponent
+                        Id: 610e0247-4d94-4d78-8652-758affe54adf
+                        Model: 3c114390-55f0-4a9e-a24a-09e61476f6b1:FlappyBall/Cylinder
+                        RenderGroup: Group31
+                        Materials: {}

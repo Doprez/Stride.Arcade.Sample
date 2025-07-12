@@ -1,0 +1,194 @@
+!SceneAsset
+Id: 62bce447-0cf8-4d75-bed2-65d16406e18e
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+ChildrenIds: []
+Offset: {X: 0.0, Y: -200.0, Z: 0.0}
+Hierarchy:
+    RootParts:
+        - ref!! db5c7fc7-fc23-4310-aca8-6b2e38fab753
+        - ref!! 0290b2a8-49fe-43ec-8003-dd39539fdc2d
+        - ref!! 4062b8b2-bc8f-49cd-a00e-545e6b2eb437
+        - ref!! ed706ac1-f90b-44b7-8369-dc8ea4f1234c
+        - ref!! 39496c2b-2847-4b91-b760-d203d9e6e4e5
+        - ref!! b7b4b124-6103-49e2-9597-899f45f00e14
+        - ref!! 995b0176-f691-4e73-b540-8cb4faff5f57
+    Parts:
+        -   Entity:
+                Id: 0290b2a8-49fe-43ec-8003-dd39539fdc2d
+                Name: Directional light
+                Components:
+                    aac09026fdf863c584b26407ca5c4035: !TransformComponent
+                        Id: 86abdc53-1b4b-4900-8b35-03f2add6306c
+                        Position: {X: 0.0, Y: 2.0, Z: 0.0}
+                        Rotation: {X: 1.131334E-08, Y: -0.9659258, Z: -0.25881904, W: -4.222196E-08}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    0ae0ed51be2971b0ff06d6fea922b6f9: !LightComponent
+                        Id: 3a9bdc7f-b6f0-42cb-974e-1c505b065173
+                        Type: !LightDirectional
+                            Color: !ColorRgbProvider
+                                Value: {R: 1.0, G: 1.0, B: 1.0}
+                            Shadow:
+                                Enabled: true
+                                Filter: !LightShadowMapFilterTypePcf
+                                    FilterSize: Filter5x5
+                                Size: Large
+                                DepthRange: {}
+                                PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic {}
+                                ComputeTransmittance: false
+                                BiasParameters: {}
+                        Intensity: 20.0
+        -   Folder: Boundaries
+            Entity:
+                Id: 39496c2b-2847-4b91-b760-d203d9e6e4e5
+                Name: BottomBoundry
+                Components:
+                    a0f128453c1c835374c6dbcf5be96993: !TransformComponent
+                        Id: 3d56e1b0-f321-492a-869b-1a6f7ba84f17
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    12a598f01cc84720b90b21eabf8b6b7d: !StaticColliderComponent
+                        Id: 9a41fb45-62d3-47f4-b4f1-02417c068e6b
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            903d47c908161bc1a9b4b37fc346c21c: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 100.0, Y: 1.0, Z: 100.0}
+                                LocalOffset: {X: 0.0, Y: -10.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        -   Entity:
+                Id: 4062b8b2-bc8f-49cd-a00e-545e6b2eb437
+                Name: Player
+                Components:
+                    44321e27efc4a5406c224a4f3de9fd78: !TransformComponent
+                        Id: 7152feed-2229-499a-93bc-8c83cb4eba0e
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    60da7b1fe55e694a9d0c004cae387418: !ModelComponent
+                        Id: a15f09fb-98a3-477d-9aa1-13162dbc85cf
+                        Model: 23574da7-9195-4633-a83e-b7781f5ea7a2:FlappyBall/Sphere
+                        RenderGroup: Group31
+                        Materials:
+                            7619ff1ac1c2fc60737417a81c641638~0: 0e67af81-1993-4592-bb53-75b37752ca41:FlappyBall/PlayerMaterial
+                    7692279d0ca23be0e13631965986d57b: !RigidbodyComponent
+                        Id: 58571f50-4309-43d2-8959-296d303e9461
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 1.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: true
+                        Gravity: {X: 0.0, Y: -15.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            64b1fd128f3abcb354e7cc585d466947: !SphereColliderShapeDesc
+                                Is2D: false
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                    cd3a09d9cf6de755a80624f8cff04ba1: !Arcade.Code.ArcadeGames.FlappyBall.FlappyBallPlayer,Arcade
+                        Id: a549a2ab-39f2-45c3-a170-35aa8499a8a0
+                        Rigidbody: ref!! 58571f50-4309-43d2-8959-296d303e9461
+                        GoalCollider: ref!! f3622458-5ce8-4239-8c0d-401023ed037d
+                        JumpForce: 7.0
+        -   Entity:
+                Id: 995b0176-f691-4e73-b540-8cb4faff5f57
+                Name: Spawner
+                Components:
+                    7d01572155beeda2440bd79cd833278c: !TransformComponent
+                        Id: c6795a10-9102-4144-8b9b-57681d76aef8
+                        Position: {X: 22.546871, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    53525cb0a696ed6ceaee00e693baafd7: !Arcade.Code.ArcadeGames.FlappyBall.Spawner,Arcade
+                        Id: 88028c01-6133-4d30-b16d-d2922b338c14
+                        PrefabToSpawn: 8712fc8e-572f-49a9-a0ca-b7ecc7975949:FlappyBall/Pipe
+                        SpawnInterval: 2.0
+                        SpawnVariation: 10.0
+        -   Folder: Boundaries
+            Entity:
+                Id: b7b4b124-6103-49e2-9597-899f45f00e14
+                Name: TopBoundry
+                Components:
+                    a0f128453c1c835374c6dbcf5be96993: !TransformComponent
+                        Id: 6a720f08-d455-4e30-8e7a-bb81b87a552d
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    12a598f01cc84720b90b21eabf8b6b7d: !StaticColliderComponent
+                        Id: 2c093c79-c326-419d-bb6f-9f45fe878501
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            903d47c908161bc1a9b4b37fc346c21c: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 100.0, Y: 1.0, Z: 100.0}
+                                LocalOffset: {X: 0.0, Y: 10.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        -   Entity:
+                Id: db5c7fc7-fc23-4310-aca8-6b2e38fab753
+                Name: Camera
+                Components:
+                    b4c96fffb22c7a67b09345ff2fa9d9ab: !TransformComponent
+                        Id: 442a48a7-d2d1-4dcb-a218-855f87c930ba
+                        Position: {X: 0.0, Y: 0.0, Z: 24.723385}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    946e6b1efc29ca0b53f2b1fcca35f94d: !CameraComponent
+                        Id: ad7a01ed-cb58-4ba5-bafd-d5b9b3504101
+                        Name: null
+                        Projection: Orthographic
+                        OrthographicSize: 20.0
+                        FarClipPlane: 50.0
+                        Slot: c1f3409f-a1fa-43a1-b9cf-663ed553a623
+        -   Entity:
+                Id: ed706ac1-f90b-44b7-8369-dc8ea4f1234c
+                Name: GoalTrigger
+                Components:
+                    ea2477618cb493ed8a20bf44d7411862: !TransformComponent
+                        Id: 8e1775f6-e789-4e15-ac43-186ff6421ef2
+                        Position: {X: -1.138254, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    665c7831deaf31c0bff094c4bf00b91b: !StaticColliderComponent
+                        Id: f3622458-5ce8-4239-8c0d-401023ed037d
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        AlwaysUpdateNaviMeshCache: false
+                        ColliderShapes:
+                            7700d486718ae70a62aba637ceb79cfd: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 50.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}

@@ -1,0 +1,11 @@
+!ProceduralModelAsset
+Id: 3c114390-55f0-4a9e-a24a-09e61476f6b1
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Type: !CylinderProceduralModel
+    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+    UvScale: {X: 1.0, Y: 1.0}
+    LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+    NumberOfTextureCoordinates: 10
+    MaterialInstance:
+        Material: 47ab7395-f8ae-4025-92fa-ef3768c160a2:FlappyBall/PipeMaterial
