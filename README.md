@@ -14,3 +14,9 @@ Controls:
 - [Right click drag] Rotate camera
 
 ![Image](Images/FlycamGame.png)
+
+
+## problems
+- Skybox does not seem compatible with different render groups so you cant load them independent to a game scene
+
+I think that the only real bug so far that I have found.
